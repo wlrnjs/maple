@@ -2,8 +2,8 @@ import api from "../../API/API";
 import {useQuery} from "react-query";
 
 const fetchSearchCharacter = (characterName) => {
-	return api.get(`/maplestory/v1/id?character_name=${characterName}`, {
-		params: {character_name: characterName},
+	return api.get(`/maplestory/v1/id`, {
+		params: { character_name: characterName },
 	});
 };
 
