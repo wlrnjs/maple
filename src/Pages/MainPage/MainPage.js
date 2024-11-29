@@ -17,7 +17,6 @@ const MainPage = () => {
 	if (isLoading) return <h1>Loading...</h1>;
 	if (isError) return <Alert variant="danger">{error.message}</Alert>;
 	
-	
 	return (
 		<div className="main-page">
 			<InputBox

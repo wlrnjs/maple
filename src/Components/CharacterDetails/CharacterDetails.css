@@ -31,9 +31,9 @@
 }
 
 .character-detail-img {
-    width: 50%;
+    width: 40%;
     height: auto;
-    border-radius: 50%;
+    border-radius: 40%;
     margin: 0 auto;
     border: 1px solid gray;
     object-fit: cover;

@@ -1,0 +1,13 @@
+.basic-information-page {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url(../../../public/IMG/background-img2.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    opacity: 0.9;
+    border-radius: 15px;
+}

@@ -1,11 +1,11 @@
 import React from 'react';
 
-const Ability = () => {
+const Advanced = () => {
 	return (
 		<div>
-			Ability
+			Advanced
 		</div>
 	);
 };
 
-export default Ability;
+export default Advanced;
