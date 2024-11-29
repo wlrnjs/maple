@@ -2,10 +2,10 @@ import React, { useState } from "react";
 import "./BasicInformation.css";
 import InputBox from "../../Components/InputBox/InputBox";
 import { Alert } from "react-bootstrap";
-import { useBasicInformation } from "../../hooks/useBasicInformation/useBasicInformation";
+import { useBasicInformation } from "../../hooks/SearchBasicInfo/useBasicInformation/useBasicInformation";
 import CharacterDetails from "../../Components/CharacterDetails/CharacterDetails";
-import { useCharacterPopularity } from "../../hooks/useCharacterPopularity/useCharacterPopularity";
-import { useSearchCharacter } from "../../hooks/useSearchCharacter/useSearchCharacter";
+import { useCharacterPopularity } from "../../hooks/SearchBasicInfo/useCharacterPopularity/useCharacterPopularity";
+import { useSearchCharacter } from "../../hooks/SearchBasicInfo/useSearchCharacter/useSearchCharacter";
 
 const BasicInformation = () => {
 	const [inputValue, setInputValue] = useState("");
@@ -14,6 +14,8 @@ const BasicInformation = () => {
 	const { data: basicInfoData, isLoading, isError, error } = useBasicInformation(searchOCID);
 	const { data: popularityData } = useCharacterPopularity(searchOCID);
 	const { data: ocidData } = useSearchCharacter(inputValue);
+	
+	console.log(basicInfoData)
 	
 	const handleButtonClick = () => {
 		if (ocidData?.data.ocid) {

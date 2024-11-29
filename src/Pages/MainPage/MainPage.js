@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import "./MainPage.css"
 import InputBox from "../../Components/InputBox/InputBox";
-import { useSearchCharacter } from "../../hooks/useSearchCharacter/useSearchCharacter";
+import { useSearchCharacter } from "../../hooks/SearchBasicInfo/useSearchCharacter/useSearchCharacter";
 import { Alert } from "react-bootstrap";
 
 const MainPage = () => {

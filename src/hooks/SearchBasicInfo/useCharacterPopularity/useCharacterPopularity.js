@@ -1,4 +1,4 @@
-import api from "../../API/API";
+import api from "../../../API/API";
 import {useQuery} from "react-query";
 
 const fetchCharacterPopularity = (string) => {
