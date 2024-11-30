@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
+import {MyContext} from "../../hooks/MyContext";
 import InputBox from "../../Components/InputBox/InputBox";
 import {useBasicInformation} from "../../hooks/SearchBasicInfo/useBasicInformation/useBasicInformation";
-import {useCharacterPopularity} from "../../hooks/SearchBasicInfo/useCharacterPopularity/useCharacterPopularity";
 import {useSearchCharacter} from "../../hooks/SearchBasicInfo/useSearchCharacter/useSearchCharacter";
 import {Alert} from "react-bootstrap";
 import CharacterAbilities from "../../Components/CharacterAbilities/CharacterAbilities";
@@ -10,9 +10,8 @@ const Abilities = () => {
 	const [inputValue, setInputValue] = useState("");
 	const [searchOCID, setSearchOCID] = useState("");
 	
-	const { data: basicInfoData, isLoading, isError, error } = useBasicInformation(searchOCID);
-	const { data: popularityData } = useCharacterPopularity(searchOCID);
 	const { data: ocidData } = useSearchCharacter(inputValue);
+	const { data: basicInfoData, isLoading, isError, error } = useBasicInformation(searchOCID);
 	
 	const handleButtonClick = () => {
 		if (ocidData?.data.ocid) {
@@ -26,7 +25,7 @@ const Abilities = () => {
 	if (isError) return <Alert variant="danger">{error.message}</Alert>;
 	
 	return (
-		<div className="basic-information-page">
+		<MyContext.Provider value={inputValue} className="basic-information-page">
 			{!basicInfoData ? (
 				<InputBox
 					title="기본 정보 조회"
@@ -37,9 +36,9 @@ const Abilities = () => {
 				/>
 			) : null}
 			{basicInfoData && (
-				<CharacterAbilities searchOCID={searchOCID}/>
+				<CharacterAbilities/>
 			)}
-		</div>
+		</MyContext.Provider>
 	
 	);
 };

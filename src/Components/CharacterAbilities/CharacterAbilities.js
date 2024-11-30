@@ -6,11 +6,11 @@ import CharacterAbilitiesComponent
 import CharacterEquippedComponents
 	from "./CharacterAbilitiesComponents/CharacterEquippedComponents/CharacterEquippedComponents";
 
-const CharacterAbilities = ({searchOCID}) => {
+const CharacterAbilities = () => {
 	return (
 		<div className="character-details-box">
 		<div className="character-abilities-container">
-			<CharacterBoxComponents  searchOCID={searchOCID}/>
+			<CharacterBoxComponents/>
 			<CharacterAbilitiesComponent/>
 		</div>
 			<CharacterEquippedComponents/>

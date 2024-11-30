@@ -1,13 +1,18 @@
-import React, {useState} from 'react';
+import React, {useContext} from 'react';
 import "./CharacterAbilitiesComponent.css"
-import {useSearchCharacterAbilities} from "../../../../hooks/SearchCharacterAbilities/AllAbilities/AllAbilities";
 import {Alert} from "react-bootstrap";
+import {MyContext} from "../../../../hooks/MyContext";
+import {useSearchCharacter} from "../../../../hooks/SearchBasicInfo/useSearchCharacter/useSearchCharacter";
+import {useSearchCharacterAbilities} from "../../../../hooks/SearchCharacterAbilities/AllAbilities/AllAbilities";
 
 const CharacterAbilitiesComponent = () => {
-	const { data: AllAbilities, isLoading, isError, error } = useSearchCharacterAbilities();
-	console.log(AllAbilities);
+	const inputValue = useContext(MyContext);
+	const {data: characterInfo, isLoading, isError, error} = useSearchCharacter(inputValue);
+	const ocidData = characterInfo?.data.ocid
+	const { data: characterAbilities} = useSearchCharacterAbilities(ocidData);
 	if (isLoading) return <h1>Loading...</h1>
 	if (isError) return <Alert variant="outline-danger">{error.message}</Alert>
+	console.log(characterAbilities);
 	
 	return (
 		<>
@@ -16,7 +21,7 @@ const CharacterAbilitiesComponent = () => {
 					<p>캐릭터 정보</p>
 					<div className="character-info-box">
 						<p>전투력</p>
-						<p>123123</p>
+						<p>{characterAbilities?.final_stat[0].stat_value}</p>
 					</div>
 					<div className="character-info-box">
 						<p>스탯 공격력</p>

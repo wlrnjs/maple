@@ -12,6 +12,6 @@ export const useSearchCharacterAbilities = (id) => {
 		queryKey: ["maple-all-abilities", id],
 		queryFn: () => fetchSearchAllAbilities(id),
 		enabled: !!id,
-		select: (response) => response.data.final_stat,
+		select: (response) => response.data,
 	})
 }
