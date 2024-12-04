@@ -2,6 +2,7 @@
     display: flex;
     width: 100%;
     height: 100vh;
+    flex-direction: row;
 }
 
 .content {
@@ -56,4 +57,54 @@
     padding: 20px;
     background-color: #f4f4f4;
     overflow-y: auto;
+}
+
+/* 반응형 */
+@media (max-width: 1200px) {
+    .content {
+        width: 20%;
+    }
+}
+
+@media (max-width: 992px) {
+    .layout {
+        flex-direction: column;
+    }
+
+    .content {
+        width: 100%;
+        height: auto;
+        border-radius: 0;
+        margin-bottom: 20px;
+    }
+
+    .layout > div:last-child {
+        padding: 10px;
+    }
+}
+
+@media (max-width: 768px) {
+    .content {
+        width: 100%;
+        padding: 10px;
+    }
+
+    .content ul li a {
+        font-size: 16px;
+    }
+
+    .layout > div:last-child {
+        padding: 5px;
+    }
+}
+
+@media (max-width: 480px) {
+    .content ul li a {
+        font-size: 14px;
+        padding: 8px;
+    }
+
+    .content img {
+        max-width: 100px;
+    }
 }

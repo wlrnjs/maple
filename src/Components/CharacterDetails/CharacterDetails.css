@@ -5,7 +5,6 @@
     height: 95vh;
     margin: 0;
     border-radius: 15px;
-    background-image: url(../../../public/IMG/background-img2.png);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -66,12 +65,41 @@ p {
     margin: 5px 0;
 }
 
+/* 반응형 스타일 */
+@media (max-width: 1024px) {
+    .character-details {
+        width: 40vw;
+        font-size: 0.9rem;
+    }
+
+    .character-detail-img {
+        width: 50%;
+    }
+}
+
 @media (max-width: 768px) {
     .character-details {
+        width: 60vw;
+        font-size: 0.85rem;
+    }
+
+    .character-detail-img {
+        width: 50%;
+    }
+}
+
+@media (max-width: 480px) {
+    .character-details {
         width: 80vw;
+        padding: 15px;
+        font-size: 0.8rem;
     }
 
     .character-detail-img {
         width: 60%;
+    }
+
+    h3 {
+        font-size: 1.2rem;
     }
 }

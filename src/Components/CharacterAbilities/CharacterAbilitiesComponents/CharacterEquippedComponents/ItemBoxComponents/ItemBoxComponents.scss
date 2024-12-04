@@ -1,12 +1,16 @@
 .item-box-components {
+  color: white;
   background-color: white;
   width: 30%;
-  height: 10vh;
+  height: 7vh;
   display: flex;
   gap: 20px;
+  border-radius: 2px;
+  align-items: center;
   img {
-    width: 30%;
-    height: 90%;
+    width: 10%;
+    height: 40%;
+    margin: 5px;
   }
 }
 
@@ -16,5 +20,14 @@
   flex-direction: column;
   p {
     font-size: 10px;
+    line-height: 4px;
   }
+}
+
+.rare {
+  color: rgb(15,91,215); /* 하늘색 */
+}
+
+.epic {
+  color: purple; /* 보라색 */
 }

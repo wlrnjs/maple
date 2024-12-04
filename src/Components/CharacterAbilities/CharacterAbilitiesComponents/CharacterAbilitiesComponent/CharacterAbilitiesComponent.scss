@@ -9,19 +9,58 @@
   border-radius: 10px;
 }
 
-.character-info-box {
-  display: flex;
-  justify-content: space-between;
-  margin: 5px;
-}
-
 .character-fight-box {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  width: 100%;
+  margin: 1px;
 }
 
-.character-fight {
-  display: flex;
-  flex-direction: column;
+.character-state-name {
+  font-size: 14px;
+  text-align: left;
+}
+
+.character-state-value {
+  font-size: 14px;
+  font-weight: bold;
+  text-align: right;
+}
+
+/* 반응형 스타일 */
+@media (max-width: 1024px) {
+  .character-abilities-box {
+    width: 15vw;
+    height: 30vh;
+  }
+
+  .character-state-name,
+  .character-state-value {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 768px) {
+  .character-abilities-box {
+    width: 20vw;
+    height: 25vh;
+  }
+
+  .character-state-name,
+  .character-state-value {
+    font-size: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .character-abilities-box {
+    width: 30vw;
+    height: 20vh;
+  }
+
+  .character-state-name,
+  .character-state-value {
+    font-size: 8px;
+  }
 }

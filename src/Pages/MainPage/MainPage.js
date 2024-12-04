@@ -21,13 +21,13 @@ const MainPage = () => {
 		<div className="main-page">
 			<InputBox
 				title="내 캐릭터 OCID 조회"
-				sub_title="캐릭터 명"
+				sub_title="닉네임"
 				onButtonClick={handleButtonClick}
 				inputValue={inputValue}
 				setInputValue={setInputValue}
 			/>
 			{isLoading && <h1>Loading...</h1>}
-			{isError && <Alert variant="outline-danger">{error.message}</Alert>}
+			{isError && <Alert>존재하지 않은 닉네임입니다.</Alert>}
 			{data && (
 				<div>
 					<h2>OCID :</h2>

@@ -5,7 +5,7 @@
   justify-content: center;
   gap: 2px;
   background-color: black;
-  width: 10vw;
+  width: 12vw;
   height: 25vh;
   padding: 10px;
   border-radius: 10px;
@@ -22,4 +22,38 @@
 .ranking-box {
   display: flex;
   gap: 12px;
+}
+
+/* 반응형 스타일 */
+@media (max-width: 1024px) {
+  .character-info-container {
+    width: 15vw;
+    height: 20vh;
+  }
+
+  .level-box, .ranking-box {
+    gap: 10px;
+  }
+}
+
+@media (max-width: 768px) {
+  .character-info-container {
+    width: 20vw;
+    height: 18vh;
+  }
+
+  .level-box, .ranking-box {
+    gap: 8px;
+  }
+}
+
+@media (max-width: 480px) {
+  .character-info-container {
+    width: 30vw;
+    height: 15vh;
+  }
+
+  .level-box, .ranking-box {
+    gap: 6px;
+  }
 }

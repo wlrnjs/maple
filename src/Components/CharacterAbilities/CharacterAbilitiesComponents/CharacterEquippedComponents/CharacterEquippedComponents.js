@@ -22,12 +22,17 @@ const CharacterEquippedComponents = () => {
 				<button>장비</button>
 				<button>캐시</button>
 			</div>
-			<ItemBoxComponents
-				item_img={equipItemsData?.data.item_equipment[0].item_icon}
-				item_name={equipItemsData?.data.item_equipment[0].item_name}
-				item_rare={equipItemsData?.data.item_equipment[0].additional_potential_option_grade}
-				item_option={equipItemsData?.data.item_equipment[0].potential_option_grade}
-			/>
+			<div className="character-equipped-item-container">
+				{equipItemsData?.data.item_equipment.map((item_icon, index) => (
+					<ItemBoxComponents
+						item_img={equipItemsData?.data.item_equipment[index].item_icon}
+						item_name={equipItemsData?.data.item_equipment[index].item_name}
+						item_rare={equipItemsData?.data.item_equipment[index].additional_potential_option_grade}
+						item_option={equipItemsData?.data.item_equipment[index].potential_option_grade}
+						key={index} />
+				))}
+			</div>
+
 		</div>
 	);
 };

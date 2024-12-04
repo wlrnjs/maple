@@ -1,4 +1,5 @@
 import React, {useState} from 'react';
+import "./Abilities.css"
 import {MyContext} from "../../hooks/MyContext";
 import InputBox from "../../Components/InputBox/InputBox";
 import {useBasicInformation} from "../../hooks/SearchBasicInfo/useBasicInformation/useBasicInformation";
@@ -25,22 +26,25 @@ const Abilities = () => {
 	if (isError) return <Alert variant="danger">{error.message}</Alert>;
 	
 	return (
-		<MyContext.Provider value={inputValue} className="basic-information-page">
-			{!basicInfoData ? (
-				<InputBox
-					title="기본 정보 조회"
-					sub_title="Enter Nickname"
-					onButtonClick={handleButtonClick}
-					inputValue={inputValue}
-					setInputValue={setInputValue}
-				/>
-			) : null}
-			{basicInfoData && (
-				<CharacterAbilities/>
-			)}
+		<MyContext.Provider value={inputValue}>
+			<div className="abilities-container">
+				{!basicInfoData ? (
+					<InputBox
+						title="능력치 정보 조회"
+						sub_title="Enter Nickname"
+						onButtonClick={handleButtonClick}
+						inputValue={inputValue}
+						setInputValue={setInputValue}
+						className="input-box"
+					/>
+				) : null}
+				{basicInfoData && (
+					<CharacterAbilities/>
+				)}
+			</div>
 		</MyContext.Provider>
-	
-	);
+
+);
 };
 
 export default Abilities;
