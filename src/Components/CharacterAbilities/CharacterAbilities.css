@@ -4,13 +4,21 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  gap: 10px;
 }
 
 .character-abilities-container {
   color: white;
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 10px;
+}
+
+@media (max-width: 800px) {
+  .character-details-box {
+    display: flex;
+    flex-direction: column;
+  }
 }
 
 /*# sourceMappingURL=CharacterAbilities.css.map */

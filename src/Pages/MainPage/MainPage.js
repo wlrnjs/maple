@@ -9,9 +9,10 @@ const MainPage = () => {
 	const [searchTerm, setSearchTerm] = useState("");
 	
 	const { data, isLoading, isError, error } = useSearchCharacter(searchTerm);
+	console.log(data);
 	
 	const handleButtonClick = () => {
-		setSearchTerm(inputValue); // 검색어를 업데이트
+		setSearchTerm(inputValue);
 	};
 	
 	if (isLoading) return <h1>Loading...</h1>;
@@ -19,21 +20,20 @@ const MainPage = () => {
 	
 	return (
 		<div className="main-page">
-			<InputBox
-				title="내 캐릭터 OCID 조회"
+			{!data ? (
+				<InputBox
+				title="캐릭터 OCID 조회"
 				sub_title="닉네임"
 				onButtonClick={handleButtonClick}
 				inputValue={inputValue}
 				setInputValue={setInputValue}
-			/>
-			{isLoading && <h1>Loading...</h1>}
-			{isError && <Alert>존재하지 않은 닉네임입니다.</Alert>}
-			{data && (
-				<div>
+			/>) : null}
+			{data?.data && (
+				<div className="ocid-box">
 					<h2>OCID :</h2>
 					<h4>{data?.data.ocid}</h4>
 				</div>
-			)}
+			)};
 		</div>
 	);
 };

@@ -15,8 +15,6 @@ const BasicInformation = () => {
 	const { data: popularityData } = useCharacterPopularity(searchOCID);
 	const { data: ocidData } = useSearchCharacter(inputValue);
 	
-	console.log(basicInfoData)
-	
 	const handleButtonClick = () => {
 		if (ocidData?.data.ocid) {
 			setSearchOCID(ocidData?.data.ocid);
@@ -47,7 +45,7 @@ const BasicInformation = () => {
 					character_class={basicInfoData?.character_class}
 					character_class_level={basicInfoData?.character_class_level}
 					character_date_create={basicInfoData?.character_date_create}
-					character_gild_name={basicInfoData?.character_guild_name}
+					character_gild_name={basicInfoData?.character_guild_name ? `'길드: '${basicInfoData?.character_guild_name}` : '소속된 길드 없음' }
 					character_world_name={basicInfoData?.world_name}
 					character_popularity={popularityData}
 				/>

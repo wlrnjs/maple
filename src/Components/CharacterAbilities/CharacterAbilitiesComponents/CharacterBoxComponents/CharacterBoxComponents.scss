@@ -9,6 +9,7 @@
   height: 25vh;
   padding: 10px;
   border-radius: 10px;
+
   img {
     transform: scaleX(-1);
   }
@@ -24,36 +25,51 @@
   gap: 12px;
 }
 
-/* 반응형 스타일 */
-@media (max-width: 1024px) {
-  .character-info-container {
-    width: 15vw;
-    height: 20vh;
-  }
+hr {
+  display: none;
+}
 
-  .level-box, .ranking-box {
+@media (max-width: 800px) {
+  .character-info-container {
+    width: 85vw;
+    height: 10vh;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
     gap: 10px;
   }
-}
 
-@media (max-width: 768px) {
-  .character-info-container {
-    width: 20vw;
-    height: 18vh;
+  hr {
+    display: block;
+    width: 0.1px;
+    height: 90%;
   }
 
-  .level-box, .ranking-box {
-    gap: 8px;
-  }
-}
-
-@media (max-width: 480px) {
-  .character-info-container {
-    width: 30vw;
-    height: 15vh;
+  .character-info-name {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 
-  .level-box, .ranking-box {
-    gap: 6px;
+  .character-info-name img {
+    width: 15vw;
+    height: 15vw;
+  }
+
+  .character-info-name p {
+    font-size: 12px;
+  }
+
+  .level-box, .date-box, .ranking-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    p {
+      font-size: 12px;
+    }
   }
 }

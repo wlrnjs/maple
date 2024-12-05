@@ -14,14 +14,9 @@ const CharacterEquippedComponents = () => {
 	const {data: equipItemsData, isError, error, isLoading} = useSearchItems(ocidData);
 	if (isLoading) return <h1>Loading...</h1>
 	if (isError) return <Alert variant="outline-danger">{error.message}</Alert>
-	console.log(equipItemsData);
 	
 	return (
 		<div className="character-equipped-box">
-			<div className="button-box">
-				<button>장비</button>
-				<button>캐시</button>
-			</div>
 			<div className="character-equipped-item-container">
 				{equipItemsData?.data.item_equipment.map((item_icon, index) => (
 					<ItemBoxComponents

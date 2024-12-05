@@ -3,7 +3,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    width: 50vw;
+    width: 35vw;
     height: 35vh;
     color: white;
     background-color: rgba(46, 46, 46, 0.7);
@@ -33,7 +33,7 @@
 }
 
 .input-btn-box button {
-    width: 8vw;
+    width: 4vw;
     height: 25px;
     border-radius: 5px;
     border: none;
@@ -42,4 +42,16 @@
 
 .input-btn-box button:hover {
     background-color: rgb(140,140,140);
+}
+
+@media (max-width: 800px) {
+    .search-box {
+        width: 75vw;
+    }
+    .input-btn-box input {
+        width: 32vw;
+    }
+    .input-btn-box button {
+        width: 10vw;
+    }
 }

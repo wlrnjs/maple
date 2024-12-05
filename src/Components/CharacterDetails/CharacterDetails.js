@@ -16,7 +16,7 @@ const CharacterDetails = ({ character_img, character_name, character_popularity,
 					<p>{character_class_level}차</p>
 				</div>
 				<p>{character_world_name}</p>
-				<p>길드: {character_gild_name}</p>
+				<p>{character_gild_name}</p>
 				<p>생성일: {character_date_create}</p>
 			</div>
 		</div>

@@ -9,10 +9,10 @@ import CharacterEquippedComponents
 const CharacterAbilities = () => {
 	return (
 		<div className="character-details-box">
-		<div className="character-abilities-container">
-			<CharacterBoxComponents/>
-			<CharacterAbilitiesComponent/>
-		</div>
+			<div className="character-abilities-container">
+				<CharacterBoxComponents/>
+				<CharacterAbilitiesComponent/>
+			</div>
 			<CharacterEquippedComponents/>
 		</div>
 	);

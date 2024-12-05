@@ -12,7 +12,6 @@ const CharacterAbilitiesComponent = () => {
 	const { data: characterAbilities} = useSearchCharacterAbilities(ocidData);
 	if (isLoading) return <h1>Loading...</h1>
 	if (isError) return <Alert variant="outline-danger">{error.message}</Alert>
-	console.log(characterAbilities);
 	
 	return (
 			<div className="character-abilities-box">

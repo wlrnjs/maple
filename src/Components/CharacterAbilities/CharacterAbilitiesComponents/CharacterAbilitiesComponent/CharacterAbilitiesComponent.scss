@@ -28,39 +28,25 @@
   text-align: right;
 }
 
-/* 반응형 스타일 */
-@media (max-width: 1024px) {
+@media (max-width: 800px) {
   .character-abilities-box {
-    width: 15vw;
-    height: 30vh;
+    width: 85vw;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 1px;
   }
 
-  .character-state-name,
-  .character-state-value {
+  .character-fight-box {
+    width: 45%;
+    height: auto;
+    margin: 2px 0;
+  }
+
+  .character-fight-box p {
     font-size: 12px;
-  }
-}
-
-@media (max-width: 768px) {
-  .character-abilities-box {
-    width: 20vw;
-    height: 25vh;
-  }
-
-  .character-state-name,
-  .character-state-value {
-    font-size: 10px;
-  }
-}
-
-@media (max-width: 480px) {
-  .character-abilities-box {
-    width: 30vw;
-    height: 20vh;
-  }
-
-  .character-state-name,
-  .character-state-value {
-    font-size: 8px;
+    font-weight: bold;
   }
 }

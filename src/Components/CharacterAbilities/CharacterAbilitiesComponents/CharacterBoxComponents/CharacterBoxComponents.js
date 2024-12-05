@@ -17,18 +17,24 @@ const CharacterBoxComponents = () => {
 	return (
 		<div>
 			<div className="character-info-container">
-				<img src="https://avatar.maplestory.nexon.com/Character/NOGCOKMMMPFDGINPAIEHKICNHECHAAKKDPKAHLMGNKMIIIICOANPNONNFNNFGEPNFGIKEIKDNPBAKCBIPBGPDIOHEJKLODCGGEKHOFGLADGEGOIKAGPDKIIGOLFFNENJPOKJPMFEAHACBEIBHHHCHLHDFBBCOACIOJELOGILMDACDPOIKEDNADPMGCPDLOKEIPJDLIOPIAOEFJPACJLBMCBKKOPKCJFMLGALGBEFLJEENJJJJJMCBOLNJFPIGHAK.png" alt=""/>
-				<p>{basicInfoData?.character_name}</p>
-				<div className="level-box">
-					<p>{basicInfoData.character_level}</p>
-					<p>{basicInfoData.character_exp_rate}</p>
+				<div className="character-info-name">
+					<img
+						src="https://avatar.maplestory.nexon.com/Character/NOGCOKMMMPFDGINPAIEHKICNHECHAAKKDPKAHLMGNKMIIIICOANPNONNFNNFGEPNFGIKEIKDNPBAKCBIPBGPDIOHEJKLODCGGEKHOFGLADGEGOIKAGPDKIIGOLFFNENJPOKJPMFEAHACBEIBHHHCHLHDFBBCOACIOJELOGILMDACDPOIKEDNADPMGCPDLOKEIPJDLIOPIAOEFJPACJLBMCBKKOPKCJFMLGALGBEFLJEENJJJJJMCBOLNJFPIGHAK.png"
+						alt=""/>
+					<p>{basicInfoData?.character_name}</p>
 				</div>
-				<p>{basicInfoData.character_date_create}</p>
+				<hr/>
+				<div className="level-box">
+					<p>레벨: {basicInfoData.character_level}</p>
+					<p>경험치: {basicInfoData.character_exp_rate}</p>
+				</div>
+				<hr/>
 				<div className="ranking-box">
-					<p>Union</p>
-					<p>All</p>
-					<p>무릉</p>
 					<p>{basicInfoData.world_name}</p>
+				</div>
+				<hr/>
+				<div className="date-box">
+					<p>{basicInfoData.character_date_create}</p>
 				</div>
 			</div>
 		</div>
