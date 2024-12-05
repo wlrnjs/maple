@@ -9,7 +9,6 @@ const MainPage = () => {
 	const [searchTerm, setSearchTerm] = useState("");
 	
 	const { data, isLoading, isError, error } = useSearchCharacter(searchTerm);
-	console.log(data);
 	
 	const handleButtonClick = () => {
 		setSearchTerm(inputValue);
@@ -33,7 +32,7 @@ const MainPage = () => {
 					<h2>OCID :</h2>
 					<h4>{data?.data.ocid}</h4>
 				</div>
-			)};
+			)}
 		</div>
 	);
 };
