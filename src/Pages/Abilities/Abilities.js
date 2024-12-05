@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import "./Abilities.css"
+import "./Abilities.css";
 import {MyContext} from "../../hooks/MyContext";
 import InputBox from "../../Components/InputBox/InputBox";
 import {useBasicInformation} from "../../hooks/SearchBasicInfo/useBasicInformation/useBasicInformation";
