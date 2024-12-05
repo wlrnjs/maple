@@ -1,0 +1,14 @@
+.abilities-container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url("../../../public/IMG/background-img3.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  border-radius: 15px;
+}
+
+/*# sourceMappingURL=Abilities.css.map */

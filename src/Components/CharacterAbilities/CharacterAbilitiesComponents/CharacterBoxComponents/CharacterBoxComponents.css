@@ -1,0 +1,71 @@
+.character-info-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2px;
+  background-color: black;
+  width: 12vw;
+  height: 25vh;
+  padding: 10px;
+  border-radius: 10px;
+}
+.character-info-container img {
+  transform: scaleX(-1);
+}
+
+.level-box {
+  display: flex;
+  gap: 12px;
+}
+
+.ranking-box {
+  display: flex;
+  gap: 12px;
+}
+
+hr {
+  display: none;
+}
+
+@media (max-width: 800px) {
+  .character-info-container {
+    width: 85vw;
+    height: 10vh;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    gap: 10px;
+  }
+  hr {
+    display: block;
+    width: 0.1px;
+    height: 90%;
+  }
+  .character-info-name {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .character-info-name img {
+    width: 15vw;
+    height: 15vw;
+  }
+  .character-info-name p {
+    font-size: 12px;
+  }
+  .level-box, .date-box, .ranking-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+  }
+  .level-box p, .date-box p, .ranking-box p {
+    font-size: 12px;
+  }
+}
+
+/*# sourceMappingURL=CharacterBoxComponents.css.map */

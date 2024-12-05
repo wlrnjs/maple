@@ -1,0 +1,54 @@
+.item-box-components {
+  color: white;
+  background-color: white;
+  width: 30%;
+  height: 7vh;
+  display: flex;
+  gap: 20px;
+  border-radius: 2px;
+  align-items: center;
+}
+
+.item-box-components img {
+  width: 10%;
+  height: 40%;
+  margin: 5px;
+}
+
+.item-box-details {
+  color: black;
+  display: flex;
+  flex-direction: column;
+}
+
+.item-box-details p {
+  font-size: 10px;
+  line-height: 4px;
+}
+
+.rare {
+  color: rgb(15, 91, 215);
+}
+
+.epic {
+  color: purple;
+}
+
+@media (max-width: 800px) {
+  .item-box-components {
+    width: 20vw;
+    height: 4vh;
+  }
+  .item-box-components img {
+    width: 15px;
+    height: 2vh;
+  }
+  .item-box-details p {
+    font-size: 7px;
+    line-height: 6px;
+    padding: 0;
+    margin: 1px;
+  }
+}
+
+/*# sourceMappingURL=ItemBoxComponents.css.map */
